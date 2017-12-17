@@ -26,7 +26,7 @@
     </nav>
 		<div class="container-fluid" style="padding: 0;">
 			<div id="myCarousel" class="carousel slide">
-	  <!-- Indicators -->
+	  	<!-- Indicators -->
 		    <ol class="carousel-indicators">
 		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 		      <li data-target="#myCarousel" data-slide-to="1"></li>
