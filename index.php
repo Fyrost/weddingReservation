@@ -1,3 +1,3 @@
-<?php 
-	echo "burat";
+<?php
+	echo "123";
 ?>
