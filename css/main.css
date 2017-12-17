@@ -35,3 +35,20 @@ div, body{
   width: 40px;
   height: 4px;
 }
+.reservation{
+       height: 500px;
+       padding: 50px;
+       width:100%;
+       background-image:url('img/bg-reserve.jpg')
+       background-position:center center;
+       background-repeat: no-repeat;
+       background-size: cover;
+}
+.form-limit{
+       max-width: 750px;
+       width: 76%;
+   position: relative;
+   left: 50%;
+   margin-left: -38%;
+
+}

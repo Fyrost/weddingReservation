@@ -63,9 +63,21 @@
 		      <span class="icon-next"></span>
 		    </a>
 			</div>
-		</div>
-    <div class="container-fluid bg-sample" style=""></div>
-    <div style="height:10000px;"></div>
+		</div
+    <div style="height:1000px;"></div>
+    <div class="reservation">
+           <div class="col-md-6 col-md-offset-3 text-center " >
+                     <h2>Reserve a Date?</h2><br>
+                     <form method="post"  class="form-limit">
+                     <label class="sr-only">First Name</label>
+                     <input class="form-control" type="text" name="username" placeholder="Name" required autofocus><br>
+                     <label class="sr-only">Last Name</label>
+                     <input class="form-control" type="text" name="password" placeholder="E-mail" required><br>
+                     <input class="btn btn-warning" type="submit" name="login">
+               </form>
+           </div>
+
+    </div>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/js.js"></script>
