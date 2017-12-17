@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link href="css/css.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<title></title>
 	</head>
@@ -23,7 +24,7 @@
          </div>
       </div>
     </nav>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -35,17 +36,17 @@
 				    </ol>
 
 				    <!-- Wrapper for slides -->
-				    <div class="carousel-inner">
+				    <div class="carousel-inner" style="height: 700px;">
 				      <div class="item active">
-				        <img src="img\1.jpg" alt="Los Angeles" style="width:100%;">
+				        <img src="img\1.jpg" alt="Los Angeles" style="height: 700px; width: 100%;">
 				      </div>
 
 				      <div class="item">
-				        <img src="img\2.jpg" alt="Chicago" style="width:100%;">
+				        <img src="img\2.jpg" alt="Chicago" style="height: 700px; width: 100%">
 				      </div>
 
 				      <div class="item">
-				        <img src="img\3.jpg" alt="New york" style="width:100%;">
+				        <img src="img\3.jpg" alt="New york" style="height: 700px; width: 100%">
 				      </div>
 				    </div>
 
