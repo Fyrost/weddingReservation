@@ -23,6 +23,7 @@
             <ul class="nav navbar-nav">
                <li><a href="index.php"><b> Home </b></a></li>
                <li><a href="#"><b> Profile </b></a></li>
+                <li><a href="#"><b> About </b></a></li>
             </ul>
          </div>
       </div>
