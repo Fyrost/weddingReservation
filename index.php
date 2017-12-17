@@ -3,6 +3,7 @@
 		<meta charset="utf-8">
 		<link href="css/css.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+              <link href="css/main.css" rel="stylesheet">
 		<title></title>
 	</head>
 	<body>
@@ -24,12 +25,17 @@
          </div>
       </div>
     </nav>
+<<<<<<< HEAD
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 				</div>
 			</div>
 		</div>
+=======
+              <div class="container-fluid bg-sample" style=""></div>
+              <div style="height:500px;"></div>
+>>>>>>> 39fe76e91774ba7e3a64fa735a6b29a2b0e400c0
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
