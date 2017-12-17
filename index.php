@@ -1,5 +1,5 @@
 <?php
 	echo "burat";
-       echo ",,/,,";
        echo "something";
+			 echo "123";
 ?>
