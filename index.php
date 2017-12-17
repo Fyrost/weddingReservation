@@ -25,7 +25,7 @@
       </div>
     </nav>
     <div class="container-fluid bg-sample" style=""></div>
-    <div style="height:500px;"></div>
+    <div style="height:10000px;"></div>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/js.js"></script>
