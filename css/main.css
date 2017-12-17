@@ -1,3 +1,7 @@
+.navbar-default {
+  background: none;
+}
+
 html, body{
   height: 100%;
 }

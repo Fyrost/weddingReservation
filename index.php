@@ -1,13 +1,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="css/css.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-              <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 		<title></title>
 	</head>
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#dff7ff;">
+		<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#options">
@@ -25,18 +24,8 @@
          </div>
       </div>
     </nav>
-<<<<<<< HEAD
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-				</div>
-			</div>
-		</div>
-=======
-              <div class="container-fluid bg-sample" style=""></div>
-              <div style="height:500px;"></div>
->>>>>>> 39fe76e91774ba7e3a64fa735a6b29a2b0e400c0
-
+    <div class="container-fluid bg-sample" style=""></div>
+    <div style="height:500px;"></div>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/js.js"></script>
