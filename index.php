@@ -6,4 +6,6 @@
                       echo "ano?";
                       echo "yo";
                       echo "asd?";
+                      echo "yes";
+                      echo "no";
 ?>
