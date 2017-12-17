@@ -1,0 +1,21 @@
+.top10
+{
+  margin-top: 10px;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio]{
+margin-top: -5px;
+}
+
+.patientProfile
+{
+  background-color: white;
+  padding: 20px;
+  box-shadow: 5px 5px 5px #777777;
+  border-radius: 5px;
+}
+
+.paddingtop
+{
+  border-top: 1px solid gray;
+  padding-top: 10px;
+}
