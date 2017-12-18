@@ -108,7 +108,10 @@
 		    </a>
 			</div>
 		</div>
-	<div style="height:1000px;"></div>
+	<div class='photographer'>
+		<div class="photographer1">
+		</div>
+	</div>
     	<div class="reservation">
 	<div class="col-md-6 col-md-offset-3 text-center " >
 		<div class="vector-w-head"></div>

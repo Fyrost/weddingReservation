@@ -89,3 +89,14 @@ div, body{
 .help-block{
        text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
 }
+
+.photographer1{
+       height: 640px;
+       background:
+              image:
+              position:
+              repeat:
+              attachment: fixed;
+       margin-top: 100px;
+       border-radius: 50%;
+}
