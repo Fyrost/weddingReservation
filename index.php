@@ -137,7 +137,10 @@
 		    </a>
 			</div>
 		</div>
-	<div style="height:1000px;"></div>
+	<div class='photographer'>
+		<div class="photographer1">
+		</div>
+	</div>
     	<div class="reservation">
 	<a name="reserve"></a>
 	<div class="col-md-6 col-md-offset-3 text-center " >
@@ -149,19 +152,19 @@
 					<label class="control-label " for="name">
 						Name
 					</label>
-					<input class="form-control" id="name" name="name" type="text"/>
+					<input class="form-control" id="name" name="name" type="text" autocomplete="off"/>
 				</div>
 				<div id="email-group" class="form-group ">
 					<label class="control-label" for="email">
 						Email
 					</label>
-					<input class="form-control" id="email" name="email" type="text"/>
+					<input class="form-control" id="email" name="email" type="text" autocomplete="off"/>
 				</div>
 				<div id="number-group" class="form-group ">
 					<label class="control-label " for="number">
 						Number
 					</label>
-					<input class="form-control" id="number" name="number" type="text"/>
+					<input class="form-control" id="number" name="number" type="text" autocomplete="off"/>
 				</div>
 				<div id="photographer-group" class="form-group ">
 					<label class="control-label" for="select">
@@ -181,14 +184,14 @@
 				</div>
 				<span id="dateWarning"></span>
 				<div id="date-group" class="form-group ">
-					<label class="control-label requiredField" for="date">
+					<label class="control-label" for="date">
 						Date
 					</label>
 					<div class="input-group">
 						<div class="input-group-addon">
 				 			<i class="fa fa-calendar"></i>
 						</div>
-						<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+						<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" autocomplete="off"/>
 					</div>
 				</div>
 				<div class="form-group">

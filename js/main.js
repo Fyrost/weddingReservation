@@ -75,4 +75,25 @@ $(document).ready(function() {
                      }
               })
        })
+
+       $('input[name="name"]').on('keyup',function(){
+              $('#name-group').removeClass('has-error');
+              $('#name-group').find('.help-block').remove();
+       })
+
+       $('input[name="email"]').on('keyup',function(){
+              $('#email-group').removeClass('has-error');
+              $('#email-group').find('.help-block').remove();
+       })
+
+       $('input[name="number"]').on('keyup',function(){
+              $('#number-group').removeClass('has-error');
+              $('#number-group').find('.help-block').remove();
+       })
+       
+       $('input[name="number"]').keypress(function (e) {
+              if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                     return false;
+              }
+       })
 });
