@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include('function.php');
-	include('query.php');
+	echo $_SESSION['test'];
 ?>
 <html>
 	<head>

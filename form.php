@@ -1,4 +1,5 @@
 <?php
+      session_start();
        include('db.php');
        include('query.php');
        $database     = new db();
@@ -34,6 +35,9 @@
               $errors['number'] = $_POST['number'];
               $errors['photographer'] = $_POST['photographer'];
               $errors['date'] = $_POST['date'];
+              $rdate= DateTime::createFromFormat('m/d/Y', $_POST['date'])->format('Y/m/d');
+              $_SESSION['test'] = sprintf(RESERVE_INSERT, $rdate, $_POST['name'], $_POST['email'], $_POST['number'], $_POST['photographer']);
+              $database->others(sprintf(RESERVE_INSERT, $rdate, $_POST['name'], $_POST['email'], $_POST['number'], $_POST['photographer']));
               //dito dapat ung queries
               $data['success'] = true;
               $data['message'] = 'Success!';
