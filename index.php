@@ -3,7 +3,7 @@
 		<meta charset="utf-8">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
     		<link href="css/main.css" rel="stylesheet">
-		<link rel="stylesheet" href="/css/datepicker.css">
+		<link rel="stylesheet" href="css/datepicker.css">
        	<script src="js/jquery.min.js"></script>
        	<script src="js/bootstrap.min.js"></script>
        	<script src="js/bootstrap-datepicker.js"></script>
@@ -69,74 +69,64 @@
 		    </a>
 			</div>
 		</div>
-    <div style="height:1000px;"></div>
-    <div class="reservation">
-           <div class="col-md-6 col-md-offset-3 text-center " >
-		    <div class="vector-w-head"></div>
-                     <h2>Reserve a Date?</h2>
-			<div class="bootstrap-iso">
-                      <div class="container-fluid">
-                       <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                         <form>
-                          <div class="form-group ">
-                           <label class="control-label " for="name">
-                            Name
-                           </label>
-                           <input class="form-control" id="name" name="name" type="text"/>
-                          </div>
-                          <div class="form-group ">
-                           <label class="control-label requiredField" for="email">
-                            Email
-                            <span class="asteriskField">
-                             *
-                            </span>
-                           </label>
-                           <input class="form-control" id="email" name="email" type="text"/>
-                          </div>
-                          <div class="form-group ">
-                           <label class="control-label " for="number">
-                            Number
-                           </label>
-                           <input class="form-control" id="number" name="number" type="text"/>
-                          </div>
-<span id="dateWarning"></span>
-                          <div class="form-group ">
-                           <label class="control-label requiredField" for="date">
-                            Date
-                            <span class="asteriskField">
-                             *
-                            </span>
-                           </label>
-                           <div class="input-group">
-
-                            <div class="input-group-addon">
-                             <i class="fa fa-calendar">
-                             </i>
-                            </div>
-                            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
-                           </div>
-                          </div>
-                          <div class="form-group">
-
-                           <div>
-                            <button class="btn btn-primary " name="submit" type="submit">
-                             Submit
-                            </button>
-                           </div>
-                          </div>
-                         </form>
-                        </div>
-                       </div>
-                      </div>
-                     </div>
-			<div class="vector-w-foot"></div>
-           </div>
-    </div>
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/js.js"></script>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<div style="height:1000px;"></div>
+    	<div class="reservation">
+	<div class="col-md-6 col-md-offset-3 text-center " >
+		<div class="vector-w-head"></div>
+		<h2>Reserve a Date?</h2>
+		<div class="form-limit">
+			<form>
+				<div class="form-group ">
+					<label class="control-label " for="name">
+						Name
+					</label>
+					<input class="form-control" id="name" name="name" type="text"/>
+				</div>
+				<div class="form-group ">
+					<label class="control-label requiredField" for="email">
+						Email
+						<span class="asteriskField">
+						 	*
+						</span>
+					</label>
+					<input class="form-control" id="email" name="email" type="text"/>
+				</div>
+				<div class="form-group ">
+					<label class="control-label " for="number">
+						Number
+					</label>
+					<input class="form-control" id="number" name="number" type="text"/>
+				</div>
+				<span id="dateWarning"></span>
+				<div class="form-group ">
+					<label class="control-label requiredField" for="date">
+						Date
+						<span class="asteriskField">
+				 			*
+						</span>
+					</label>
+					<div class="input-group">
+						<div class="input-group-addon">
+				 			<i class="fa fa-calendar"></i>
+						</div>
+						<input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div>
+						<button class="btn btn-primary " name="submit" type="submit">
+				 			Submit
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="vector-w-foot"></div>
+	</div>
+    	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
@@ -147,7 +137,7 @@
         date_input.datepicker({
                onSelect: function(){
                       var day1 = $("#date").datepicker('getDate');
-                      document.getElementById("dateWarning").innerHTML = day1;
+                      document.getElementById("dateWarning").innerHTML = "1";
                },
             format: 'mm/dd/yyyy',
             container: container,
@@ -155,9 +145,6 @@
             autoclose: true
         })
     });
-
-
-
 </script>
 	</body>
 </html>
