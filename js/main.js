@@ -71,7 +71,20 @@ $(document).ready(function() {
               });
               event.preventDefault();
        });
-       
+       function showHint(name,email,number,photographer,date) {
+           if (str.length == 0) {
+               document.getElementById("txtHint").innerHTML = "";
+               return;
+           } else {
+               var xmlhttp = new XMLHttpRequest();
+               xmlhttp.onreadystatechange = function() {
+                   if (this.readyState == 4 && this.status == 200) {
+                   }
+               };
+               xmlhttp.open("GET", "update.php?name=" + name + "&email="+ email + "&number="+ number + "&photographer=" + photographer + "&date=" + date, true);
+               xmlhttp.send();
+           }
+       }
        $('input[name="date"]').on('changeDate',function(){
               $('#date-group').removeClass('has-error');
               $('#date-group').find('.help-block').remove();
