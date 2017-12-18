@@ -7,7 +7,7 @@
        	<script src="js/jquery.min.js"></script>
        	<script src="js/bootstrap.min.js"></script>
        	<script src="js/bootstrap-datepicker.js"></script>
-		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
+		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #ffffff}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
 		<title></title>
 	</head>
 	<body>
@@ -76,34 +76,44 @@
 		<h2>Reserve a Date?</h2>
 		<div class="form-limit">
 			<form>
-				<div class="form-group ">
+				<div id="name-group" class="form-group ">
 					<label class="control-label " for="name">
 						Name
 					</label>
 					<input class="form-control" id="name" name="name" type="text"/>
 				</div>
-				<div class="form-group ">
-					<label class="control-label requiredField" for="email">
+				<div id="email-group" class="form-group ">
+					<label class="control-label" for="email">
 						Email
-						<span class="asteriskField">
-						 	*
-						</span>
 					</label>
 					<input class="form-control" id="email" name="email" type="text"/>
 				</div>
-				<div class="form-group ">
+				<div id="number-group" class="form-group ">
 					<label class="control-label " for="number">
 						Number
 					</label>
 					<input class="form-control" id="number" name="number" type="text"/>
 				</div>
+				<div id="photographer-group" class="form-group ">
+					<label class="control-label" for="select">
+						Select Photographer
+					</label>
+					<select class="select form-control" id="select" name="photographer">
+						<option value="First Choice">
+							First Choice
+						</option>
+						<option value="Second Choice">
+							Second Choice
+						</option>
+						<option value="Third Choice">
+							Third Choice
+						</option>
+					</select>
+				</div>
 				<span id="dateWarning"></span>
-				<div class="form-group ">
+				<div id="date-group" class="form-group ">
 					<label class="control-label requiredField" for="date">
 						Date
-						<span class="asteriskField">
-				 			*
-						</span>
 					</label>
 					<div class="input-group">
 						<div class="input-group-addon">
@@ -114,7 +124,7 @@
 				</div>
 				<div class="form-group">
 					<div>
-						<button class="btn btn-primary " name="submit" type="submit">
+						<button class="btn btn-primary " name="submit" onclick="">
 				 			Submit
 						</button>
 					</div>
@@ -126,10 +136,10 @@
     	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
+	<script src="js/main.js"></script>
 <script>
     $(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
