@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include('db.php');
   include('query.php');
   $database = new db();
@@ -27,5 +28,14 @@
     {
       echo "Invalid Username/Password";
     }
+    else
+    {
+      $_SESSION['username'] = $username;
+      echo "";
+    }
+  }
+  else if(isset($_REQUEST["logout"]))
+  {
+    $_SESSION['username'] = null;
   }
 ?>

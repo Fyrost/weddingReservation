@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+	session_start();
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -9,7 +11,7 @@
 		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #ffffff}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
 		<title></title>
 	</head>
-	<!-- Modal Register -->
+	<!-- Modal Login -->
 	<div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -32,6 +34,8 @@
       </div>
     </div>
 	</div>
+
+	<!-- Modal Register -->
 	<div class="modal fade" id="registerModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -86,8 +90,9 @@
         </div>
 				<div class="collapse navbar-collapse navbar-right" id="options1">
 					<ul class="nav navbar-nav">
-						<li><a href="#" data-toggle="modal" data-target="#loginModal"><b> Login </b></a></li>
-						<li><a href="#" data-toggle="modal" data-target="#registerModal"><b> Register </b></a></li>
+						<?php
+							include('loginNav.php');
+						?>
 					</ul>
         </div>
       </div>
