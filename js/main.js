@@ -6,7 +6,7 @@ $(document).ready(function() {
                      'name'                 : $('input[name=name]').val(),
                      'email'                 : $('input[name=email]').val(),
                      'number'              : $('input[name=number]').val(),
-                     'photographer'     : $('input[name=photographer]').val(),
+                     'photographer'     : $('select[name=photographer]').val(),
                      'date'                    : $('input[name=date]').val()
               };
               $.ajax({
@@ -19,25 +19,26 @@ $(document).ready(function() {
               .done(function(data) {
                      console.log(data);
                      if ( ! data.success) {
+                            var alert     = '<div class="help-block">';
                             if (data.errors.name) {
                                    $('#name-group').addClass('has-error');
-                                   $('#name-group').append('<div class="help-block">' + data.errors.name + '</div>');
+                                   $('#name-group').append(alert + data.errors.name + '</div>');
                             }
                             if (data.errors.email) {
                                    $('#email-group').addClass('has-error');
-                                   $('#email-group').append('<div class="help-block">' + data.errors.email + '</div>');
+                                   $('#email-group').append(alert + data.errors.email + '</div>');
                             }
                             if (data.errors.number) {
                                    $('#number-group').addClass('has-error');
-                                   $('#number-group').append('<div class="help-block">' + data.errors.number + '</div>');
+                                   $('#number-group').append(alert + data.errors.number + '</div>');
                             }
                             if (data.errors.photographer) {
                                    $('#photographer-group').addClass('has-error');
-                                   $('#photographer-group').append('<div class="help-block">' + data.errors.photographer + '</div>');
+                                   $('#photographer-group').append(alert + data.errors.photographer + '</div>');
                             }
                             if (data.errors.date) {
-                                   $('#superhero-group').addClass('has-error');
-                                   $('#superhero-group').append('<div class="help-block">' + data.errors.date + '</div>');
+                                   $('#date-group').addClass('has-error');
+                                   $('#date-group').append(alert + data.errors.date + '</div>');
                             }
                      } else {
                             $('form').append('<div class="alert alert-success">' + data.message + '</div>');
@@ -46,4 +47,23 @@ $(document).ready(function() {
               });
               event.preventDefault();
        });
+       $('input[name="date"]').on('changeDate',function(){
+              $('#date-group').removeClass('has-error');
+              $('#date-group').find('.help-block').remove();
+               var value = $(this).val();
+               $.ajax({
+                     type                    : 'GET',
+                     url                      : 'date.php',
+                     data                    : {'date' : value},
+                     dataType            : 'json',
+                     encode               : true
+              })
+              .done(function(data){
+                     console.log(data);
+                     if ( ! data.success) {
+                            $('#date-group').addClass('has-error');
+                            $('#date-group').append('<div class="help-block">' + data.error + '</div>');
+                     }
+              })
+       })
 });

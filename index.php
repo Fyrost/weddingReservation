@@ -137,7 +137,7 @@
 					<label class="control-label" for="select">
 						Select Photographer
 					</label>
-					<select class="select form-control" id="select" name="photographer">
+					<select class="select form-control" id="photographer" name="photographer">
 						<option value="First Choice">
 							First Choice
 						</option>
@@ -186,17 +186,13 @@ $(document).ready(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
-               onSelect: function(){
-                      var day1 = $('input[name="date"]').datepicker('getDate');
-                      document.getElementById("dateWarning").innerHTML = "1";
-               },
             format: 'mm/dd/yyyy',
             container: container,
             todayHighlight: true,
             autoclose: true
         })
     });
-}
+})
 </script>
-	</body>
+</body>
 </html>
