@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	include('function.php');
+	include('query.php');
 ?>
 <html>
 	<head>
@@ -194,15 +196,7 @@
 						Select Photographer
 					</label>
 					<select class="select form-control" id="photographer" name="photographer">
-						<option value="First Choice">
-							First Choice
-						</option>
-						<option value="Second Choice">
-							Second Choice
-						</option>
-						<option value="Third Choice">
-							Third Choice
-						</option>
+						<?php comboFill(PHOTOGRAPHER_TABLE); ?>
 					</select>
 				</div>
 				<span id="dateWarning"></span>
@@ -219,7 +213,7 @@
 				</div>
 				<div class="form-group">
 					<div>
-						<button class="btn btn-primary " name="submit" onclick="">
+						<button class="btn btn-primary " name="submit" id="submit">
 				 			Submit
 						</button>
 					</div>

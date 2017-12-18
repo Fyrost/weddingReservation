@@ -1,4 +1,7 @@
 <?php
+       include('db.php');
+       include('query.php');
+       $database     = new db();
        $errors         = array();
        $data           = array();
        if (empty($_POST['name']))
@@ -26,7 +29,12 @@
               $data['success'] = false;
               $data['errors']  = $errors;
        } else {
-              //dito ung process
+              $data['name'] = $_POST['name'];
+              $errors['email'] = $_POST['email'];
+              $errors['number'] = $_POST['number'];
+              $errors['photographer'] = $_POST['photographer'];
+              $errors['date'] = $_POST['date'];
+              //dito dapat ung queries
               $data['success'] = true;
               $data['message'] = 'Success!';
        }
