@@ -8,4 +8,5 @@
 
   DEFINE("COUNT_RESERVED", "SELECT COUNT(*) as count FROM reserve WHERE date = '%s' AND isConfirmed=0");
   DEFINE("USER_CHECK", "SELECT COUNT(*) as count FROM admin WHERE user='%s'");
+  DEFINE("USER_INSERT", "INSERT INTO admin(user, pass) VALUES('%s', '%s')");
 ?>

@@ -19,20 +19,20 @@
         <div class="modal-body">
 					<div class="form-group">
 						<label>Username</label>
-						<input class="form-control" name="Username" onkeyup="user_check(this.value)" type="text"/>
+						<input class="form-control" id="username" name="Username" onkeyup="user_check(this.value)" type="text"/>
 						<p id="user"></p>
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input class="form-control" name="Password" onkeydown="" type="password"/>
+						<input class="form-control" id="password" name="Password" onkeyup="pass_check()" type="password"/>
 						<p id="pass"></p>
 					</div>
 					<div class="form-group">
 						<label>Re-type Password</label>
-						<input class="form-control" name="Password" onkeydown="" type="password"/>
+						<input class="form-control" id="password1" name="Password1" onkeyup="pass_check()" type="password"/>
 						<p id="pass1"></p>
 					</div>
-					<input class="btn btn-primary btn-block" name="register" onkeydown="" type="submit"/>
+					<button class="btn btn-primary btn-block" id="regist" onclick="submitReg()" disabled>Register</button>
         </div>
       </div>
     </div>
@@ -181,6 +181,7 @@
 	<link rel="stylesheet" href="css/bootstrap-datepicker3.css"/>
 	<script src="js/main.js"></script>
 <script>
+$(document).ready(function(){
     $(function(){
         var date_input=$('input[name="date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
@@ -195,28 +196,6 @@
             autoclose: true
         })
     });
-    $('input[name="date"]').change(function(){
-            checkDate($(this).val());
-    })
-    function checkDate(str) {
-    if (str.length == 0) {
-        document.getElementById("dateWarning").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("dateWarning").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET", "date.php?date=" + str, true);
-        xmlhttp.send();
-    }
-}
-function alertSlide(){
-	$(".custom-alert").slideUp(500, function() {
-	    $(this).remove();
-	});
 }
 </script>
 	</body>
