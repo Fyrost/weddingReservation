@@ -3,7 +3,7 @@
          $hostname = 'localhost';
          $username = 'root';
          $password = '';
-         $dbname = 'students';
+         $dbname = 'reservation';
 
          //connect host
          $link = mysql_connect($hostname,$username,$password)
