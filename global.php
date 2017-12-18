@@ -38,4 +38,28 @@
   {
     $_SESSION['username'] = null;
   }
+  else if(isset($_REQUEST["fill"]))
+  {
+    $reserve = $database->get_multi_row(RESERVATION);
+    $result = "";
+    foreach($reserve as $row)
+    {
+      echo "<tr>";
+      echo "<td>".$row['name']."</td>";
+      echo "<td>".$row['date']."</td>";
+      echo "<td>".$row['contact']."</td>";
+      echo "<td>".$row['pname']."</td>";
+      echo "<td><input class='btn btn-success' type='button' data-value=".$row['id']." onclick='acceptRes($(this).data().value)' name='accept' value='Accept'><input class='btn btn-danger' type='button' data-value=".$row['id']." onclick='deleteRes($(this).data().value)' name='delete' value='Delete'></td>";
+      echo "</tr>";
+    }
+    echo $result;
+  }
+  else if(isset($_REQUEST["updateRes"]))
+  {
+    $database->others(sprintf(UPDATE_RESERVE, $_REQUEST["updateRes"]));
+  }
+  else if(isset($_REQUEST["deleteRes"]))
+  {
+    $database->others(sprintf(DELETE_RESERVE, $_REQUEST["deleteRes"]));
+  }
 ?>

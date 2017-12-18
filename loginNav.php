@@ -4,6 +4,7 @@
     echo
     "
       <li><a href='#' onclick='logout_account()'><b> Logout </b></a></li>
+      <li><a href='#' data-toggle='modal' data-target='#reservationModal'><b> Accept Reservations </b></a></li>
     ";
   }
   else
