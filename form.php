@@ -30,10 +30,10 @@
               $data['errors']  = $errors;
        } else {
               $data['name'] = $_POST['name'];
-              $errors['email'] = $_POST['email'];
-              $errors['number'] = $_POST['number'];
-              $errors['photographer'] = $_POST['photographer'];
-              $errors['date'] = $_POST['date'];
+              $data['email'] = $_POST['email'];
+              $data['number'] = $_POST['number'];
+              $data['photographer'] = $_POST['photographer'];
+              $data['date'] = $_POST['date'];
               //dito dapat ung queries
               $data['success'] = true;
               $data['message'] = 'Success!';
