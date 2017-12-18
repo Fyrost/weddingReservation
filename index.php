@@ -63,7 +63,7 @@
 		      <span class="icon-next"></span>
 		    </a>
 			</div>
-		</div
+		</div>
     <div style="height:1000px;"></div>
     <div class="reservation">
            <div class="col-md-6 col-md-offset-3 text-center " >
