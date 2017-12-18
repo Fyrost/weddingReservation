@@ -81,5 +81,10 @@ $(document).ready(function() {
               $('#number-group').removeClass('has-error');
               $('#number-group').find('.help-block').remove();
        })
-
+       
+       $('input[name="number"]').keypress(function (e) {
+              if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                     return false;
+              }
+       })
 });

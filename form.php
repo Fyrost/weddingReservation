@@ -7,6 +7,9 @@
        if (empty($_POST['email']))
               $errors['email'] = 'Email is required.';
 
+       if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+              $errors['email'] = 'Email is invalid.';
+
        if (empty($_POST['number']))
               $errors['number'] = 'Number is required.';
 
