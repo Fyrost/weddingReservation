@@ -13,7 +13,6 @@
   DEFINE("PHOTOGRAPHER_TABLE","SELECT id,CONCAT(name,' ',last) as name FROM photographer ");
   DEFINE("RESERVE_INSERT","INSERT INTO reserve(date,name,email,number,isConfirmed) VALUES('%s','%s','%s','%s',1)");
   DEFINE("RESERVE_MAX_ID","SELECT max(id) AS id FROM reserve");
-  DEFINE("RESERVED_PHOTOGRAPHER_INSERT","INSERT INTO reserved_photographer(photographer_id,reserve_id) VALUES(%s,%s)");
   DEFINE("RESERVATION", "SELECT reserve.id, reserve.name, reserve.date, CONCAT(reserve.email,'/', reserve.number) as contact, CONCAT(photographer.name,' ',photographer.last) as pname
                         FROM reserve INNER JOIN photographer ON photographer.id = reserve.photographer_id WHERE isConfirmed = 1");
   DEFINE("UPDATE_RESERVE", "UPDATE reserve SET isConfirmed = 0 WHERE id = %s");
