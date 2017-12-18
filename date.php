@@ -4,10 +4,9 @@
       $database = new db();
       $date = $_REQUEST["date"];
       $rdate= DateTime::createFromFormat('m/d/Y', $date)->format('Y/m/d');
-      $qDate = new DateTime($date);
       if($rdate>date("Y/m/d"))
       {
-        $reserved_num = $database->get_row(sprintf(COUNT_RESERVED,$qDate->format('Y/m/d')));
+        $reserved_num = $database->get_row(sprintf(COUNT_RESERVED,$rdate));
         if ($reserved_num["count"] == 0)
         {
           echo

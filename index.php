@@ -1,32 +1,71 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+			<link href="css/bootstrap.min.css" rel="stylesheet">
     		<link href="css/main.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/datepicker.css">
-       	<script src="js/jquery.min.js"></script>
-       	<script src="js/bootstrap.min.js"></script>
+				<link rel="stylesheet" href="css/datepicker.css">
        	<script src="js/bootstrap-datepicker.js"></script>
 		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
 		<title></title>
 	</head>
+	<!-- Modal Register -->
+	<div class="modal fade" id="registerModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Register</h4>
+        </div>
+        <div class="modal-body">
+					<div class="form-group">
+						<label>Username</label>
+						<input class="form-control" name="Username" onkeyup="user_check(this.value)" type="text"/>
+						<p id="user"></p>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input class="form-control" name="Password" onkeydown="" type="password"/>
+						<p id="pass"></p>
+					</div>
+					<div class="form-group">
+						<label>Re-type Password</label>
+						<input class="form-control" name="Password" onkeydown="" type="password"/>
+						<p id="pass1"></p>
+					</div>
+					<input class="btn btn-primary btn-block" name="register" onkeydown="" type="submit"/>
+        </div>
+      </div>
+    </div>
+	</div>
+
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#options">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
            </button>
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#options1">
+						 <span class="icon-bar"></span>
+						 <span class="icon-bar"></span>
+						 <span class="icon-bar"></span>
+					</button>
         </div>
-         <div class="collapse navbar-collapse navbar-right" id="options">
-            <ul class="nav navbar-nav">
-               <li><a href="index.php"><b> Home </b></a></li>
-               <li><a href="#"><b> Profile </b></a></li>
-                <li><a href="#"><b> About </b></a></li>
-            </ul>
-         </div>
+        <div class="collapse navbar-collapse navbar-left" id="options">
+					<ul class="nav navbar-nav">
+						<li><a href="index.php"><b> Home </b></a></li>
+						<li><a href="#"><b> Profile </b></a></li>
+						<li><a href="#"><b> About </b></a></li>
+					</ul>
+        </div>
+				<div class="collapse navbar-collapse navbar-right" id="options1">
+					<ul class="nav navbar-nav">
+						<li><a href="#"><b> Login </b></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#registerModal"><b> Register </b></a></li>
+					</ul>
+        </div>
       </div>
     </nav>
 		<div class="container-fluid" style="padding: 0;">
@@ -123,8 +162,9 @@
 		</div>
 		<div class="vector-w-foot"></div>
 	</div>
-    	</div>
+</div>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/register.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
