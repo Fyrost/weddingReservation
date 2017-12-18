@@ -8,14 +8,14 @@
               $errors['email'] = 'Email is required.';
 
        if (empty($_POST['number']))
-              $errors['number'] = 'number is required.';
+              $errors['number'] = 'Number is required.';
 
        if (empty($_POST['photographer']))
-              $errors['photographer'] = 'photographer is required.';
+              $errors['photographer'] = 'Photographer is required.';
 
        if (empty($_POST['date']))
-              $errors['date'] = 'date is required.';
-       
+              $errors['date'] = 'Date is required.';
+
        if ( ! empty($errors)) {
               $data['success'] = false;
               $data['errors']  = $errors;
