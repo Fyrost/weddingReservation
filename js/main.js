@@ -1,3 +1,12 @@
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+$("#reserve").click(function() {
+   scrollToAnchor('reserve');
+});
+
 $(document).ready(function() {
        $('form').submit(function(event) {
               $('.form-group').removeClass('has-error');
