@@ -46,7 +46,7 @@ div, body{
        background-position:center center;
        background-repeat: no-repeat;
        background-size: cover;
-       height: 800px;
+       min-height: 800px;
        padding: 50px 0;
        width:100%;
 }
@@ -69,7 +69,6 @@ div, body{
 
 .vector-w-foot, .vector-g-foot {
        padding-top: 42px;
-        padding-bottom: 42px;
 }
 
 .vector-w-head {
@@ -86,4 +85,7 @@ div, body{
 
 .vector-g-foot {
     background: url(../img/vectorgfoot.png) no-repeat center center;
+}
+.help-block{
+       text-shadow: 2px 2px 3px rgba(255,255,255,0.8);
 }
