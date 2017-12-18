@@ -35,19 +35,50 @@ div, body{
   width: 40px;
   height: 4px;
 }
+
 .reservation{
-       height: 500px;
-       padding: 50px;
-       width:100%;
-       background-image:url('img/bg-reserve.jpg')
+       background-image: url('../img/bg-reserve.jpg');
        background-position:center center;
        background-repeat: no-repeat;
        background-size: cover;
+       height: 500px;
+       padding: 50px 0;
+       width:100%;
 }
+
 .form-limit{
-       max-width: 750px;
-       width: 76%;
-   position: relative;
-   left: 50%;
-   margin-left: -38%;
+       width: 80%;
+       position: relative;
+       left: 50%;
+       margin-left: -40%;
+}
+
+.vector-w-head, .vector-w-foot, .vector-g-head, .vector-g-foot{
+       position: relative;
+       margin: 30px auto;
+}
+
+.vector-w-head, .vector-g-head {
+         padding-top: 42px;
+}
+
+.vector-w-foot, .vector-g-foot {
+       padding-top: 42px;
+        padding-bottom: 42px;
+}
+
+.vector-w-head {
+    background: url(../img/vectorwhead.png) no-repeat center top;
+}
+
+.vector-w-foot {
+    background: url(../img/vectorwfoot.png) no-repeat center center;
+}
+
+.vector-g-head {
+    background: url(../img/vectorghead.png) no-repeat center top;
+}
+
+.vector-g-foot {
+    background: url(../img/vectorgfoot.png) no-repeat center center;
 }
