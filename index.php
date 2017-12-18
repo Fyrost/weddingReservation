@@ -7,8 +7,6 @@
        	<script src="js/jquery.min.js"></script>
        	<script src="js/bootstrap.min.js"></script>
        	<script src="js/bootstrap-datepicker.js"></script>
-		<link rel="stylesheet" href="css/bootstrap-iso.css" />
-		<link rel="stylesheet" href="css/font-awesome.min.css" />
 		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
 		<title></title>
 	</head>
