@@ -7,6 +7,14 @@ $("#reserve").click(function() {
    scrollToAnchor('reserve');
 });
 
+$("#photo").click(function() {
+   scrollToAnchor('photo');
+});
+
+$("#home").click(function() {
+   scrollToAnchor('home');
+});
+
 $(document).ready(function() {
        $('form').submit(function(event) {
               $('.form-group').removeClass('has-error');

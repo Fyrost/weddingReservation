@@ -85,8 +85,8 @@
         </div>
         <div class="collapse navbar-collapse navbar-left" id="options">
 					<ul class="nav navbar-nav">
-						<li><a href="index.php"><b> Home </b></a></li>
-						<li><a href="#"><b> About </b></a></li>
+						<li><a id="home" href="#"><b> Home </b></a></li>
+						<li><a id="photo" href="#"><b> Photographer </b></a></li>
 						<li><a id="reserve" href="#"><b> Reserve </b></a></li>
 					</ul>
         </div>
@@ -99,6 +99,36 @@
         </div>
       </div>
     </nav>
+		<div id="reservationModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Reservation List</h4>
+		      </div>
+		      <div class="modal-body">
+		        <table class="table">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Costumer Name</th>
+									<th>Contact</th>
+									<th>Photographer Name</th>
+									<th>Options</th>
+								</tr>
+							</thead>
+							<tbody id="bod">
+
+							</tbody>
+						</table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<a name="home"></a>
 		<div class="container-fluid" style="padding: 0;">
 			<div id="myCarousel" class="carousel slide">
 	  	<!-- Indicators -->
@@ -139,6 +169,7 @@
 		    </a>
 			</div>
 		</div>
+	<a name="photo"></a>
 	<div class='photographer-section container-fluid'>
 		<h1 class="text-center">Our Photographer</h1>
 		<div class="row">
@@ -166,7 +197,7 @@
 			</div>
 		</div>
 	</div>
-    	<div class="reservation">
+  <div class="reservation">
 	<a name="reserve"></a>
 	<div class="col-md-6 col-md-offset-3 text-center " >
 		<div class="vector-w-head"></div>

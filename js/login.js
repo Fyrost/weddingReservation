@@ -34,9 +34,40 @@ function logout_account()
   xmlhttp.send();
 }
 
-$('a[href*=#]').click(function(event){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-    event.preventDefault();
+$("#reservationModal").on('show.bs.modal', function (){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200)
+      {
+        document.getElementById("bod").innerHTML = this.responseText;
+      }
+  };
+  xmlhttp.open("GET", "global.php?fill=ok", true);
+  xmlhttp.send();
 });
+
+function acceptRes(data)
+{
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200)
+      {
+        location.reload();
+      }
+  };
+  xmlhttp.open("GET", "global.php?updateRes="+data, true);
+  xmlhttp.send();
+}
+
+function deleteRes(data)
+{
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200)
+      {
+        location.reload();
+      }
+  };
+  xmlhttp.open("GET", "global.php?deleteRes="+data, true);
+  xmlhttp.send();
+}
