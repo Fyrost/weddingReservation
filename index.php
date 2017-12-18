@@ -84,8 +84,8 @@
         <div class="collapse navbar-collapse navbar-left" id="options">
 					<ul class="nav navbar-nav">
 						<li><a href="index.php"><b> Home </b></a></li>
-						<li><a href="#"><b> Profile </b></a></li>
 						<li><a href="#"><b> About </b></a></li>
+						<li><a id="reserve" href="#"><b> Reserve </b></a></li>
 					</ul>
         </div>
 				<div class="collapse navbar-collapse navbar-right" id="options1">
@@ -139,6 +139,7 @@
 		</div>
 	<div style="height:1000px;"></div>
     	<div class="reservation">
+	<a name="reserve"></a>
 	<div class="col-md-6 col-md-offset-3 text-center " >
 		<div class="vector-w-head"></div>
 		<h2>Reserve a Date?</h2>
