@@ -1,7 +1,12 @@
+/* registration */
+#user{ color: red; }
+#pass{ color: red; }
+#pass1{ color: red; }
+/* end registration */
 .navbar{
   border: none;
   border-radius: 0;
-  background-color: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
 }
 
 html, body{

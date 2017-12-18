@@ -7,5 +7,5 @@
   // DEFINE("MISC_LIST", "SELECT * FROM %s");
 
   DEFINE("COUNT_RESERVED", "SELECT COUNT(*) as count FROM reserve WHERE date = '%s' AND isConfirmed=0");
-
+  DEFINE("USER_CHECK", "SELECT COUNT(*) as count FROM admin WHERE user='%s'");
 ?>
