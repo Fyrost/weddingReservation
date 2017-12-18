@@ -4,6 +4,9 @@
        if (empty($_POST['name']))
               $errors['name'] = 'Name is required.';
 
+       if(!preg_match("/^[a-zA-Z ]*$/",$_POST['name']))
+              $errors['name'] = 'Only letters and white space allowed';
+              
        if (empty($_POST['email']))
               $errors['email'] = 'Email is required.';
 
