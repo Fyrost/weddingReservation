@@ -2,7 +2,14 @@
 	<head>
 		<meta charset="utf-8">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    		<link href="css/main.css" rel="stylesheet">
+		<link rel="stylesheet" href="/css/datepicker.css">
+       	<script src="js/jquery.min.js"></script>
+       	<script src="js/bootstrap.min.js"></script>
+       	<script src="js/bootstrap-datepicker.js"></script>
+		<link rel="stylesheet" href="css/bootstrap-iso.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}</style>
 		<title></title>
 	</head>
 	<body>
