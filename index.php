@@ -137,8 +137,31 @@
 		    </a>
 			</div>
 		</div>
-	<div class='photographer'>
-		<div class="photographer1">
+	<div class='photographer-section container-fluid'>
+		<h1 class="text-center">Our Photographer</h1>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-1 photographer-profile">
+				<div class="vector-g-head"></div>
+				<h2 class="text-center">Peter Evero</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec velit nunc. Nullam dictum congue vestibulum. Nullam scelerisque enim sit amet tincidunt mollis. Donec placerat mi in neque commodo auctor. Donec non quam eget nunc fringilla volutpat quis nec nisi. Sed consectetur elit mauris, feugiat consequat est dignissim in. Morbi sollicitudin rhoncus dui. Morbi lobortis lectus a convallis varius. Nam pharetra felis eget ullamcorper efficitur. Curabitur sodales quam feugiat pharetra mattis. Aliquam condimentum magna ac arcu ullamcorper cursus. Duis accumsan lorem eu lorem posuere, quis pulvinar nisl finibus.</p>
+				<div class="vector-g-foot"></div>
+			</div>
+			<div class="col-md-8">
+				<div class="photographer" style="background-image: url('img/photographer/1.jpg');">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-1 photographer-profile">
+				<div class="vector-g-head"></div>
+				<h2 class="text-center">Joyce Castro</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec velit nunc. Nullam dictum congue vestibulum. Nullam scelerisque enim sit amet tincidunt mollis. Donec placerat mi in neque commodo auctor. Donec non quam eget nunc fringilla volutpat quis nec nisi. Sed consectetur elit mauris, feugiat consequat est dignissim in. Morbi sollicitudin rhoncus dui. Morbi lobortis lectus a convallis varius. Nam pharetra felis eget ullamcorper efficitur. Curabitur sodales quam feugiat pharetra mattis. Aliquam condimentum magna ac arcu ullamcorper cursus. Duis accumsan lorem eu lorem posuere, quis pulvinar nisl finibus.</p>
+				<div class="vector-g-foot"></div>
+			</div>
+			<div class="col-md-8">
+				<div class="photographer" style="background-image: url('img/photographer/2.jpg');">
+				</div>
+			</div>
 		</div>
 	</div>
     	<div class="reservation">
