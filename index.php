@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -9,6 +10,28 @@
 		<title></title>
 	</head>
 	<!-- Modal Register -->
+	<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login</h4>
+        </div>
+        <div class="modal-body">
+					<div class="form-group">
+						<label>Username</label>
+						<input class="form-control" id="luser" name="Username" type="text"/>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input class="form-control" id="lpass" name="Password" type="password"/>
+					</div>
+					<p id="login_error" style="color: red;"></p>
+					<button class="btn btn-primary btn-block" onclick="login_account()">Login</button>
+        </div>
+      </div>
+    </div>
+	</div>
 	<div class="modal fade" id="registerModal" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -17,6 +40,7 @@
           <h4 class="modal-title">Register</h4>
         </div>
         <div class="modal-body">
+					<center><h3 id="successReg"></h3></center>
 					<div class="form-group">
 						<label>Username</label>
 						<input class="form-control" id="username" name="Username" onkeyup="user_check(this.value)" type="text"/>
@@ -62,7 +86,7 @@
         </div>
 				<div class="collapse navbar-collapse navbar-right" id="options1">
 					<ul class="nav navbar-nav">
-						<li><a href="#"><b> Login </b></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#loginModal"><b> Login </b></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#registerModal"><b> Register </b></a></li>
 					</ul>
         </div>
@@ -175,6 +199,7 @@
 </div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/register.js"></script>
+	<script src="js/login.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>

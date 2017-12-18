@@ -76,13 +76,24 @@ function submitReg()
 {
   var p = document.getElementById("password").value;
   var u = document.getElementById("username").value;
-  document.getElementById("pass1").innerHTML = p+" "+u;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200)
       {
+        document.getElementById("successReg").innerHTML = "Registration Success!";
       }
     }
   xmlhttp.open("GET", "global.php?u="+u+"&p="+p, true);
   xmlhttp.send();
 }
+
+$('#registerModal').on('hidden.bs.modal', function () {
+  document.getElementById("username").value = null;
+  document.getElementById("password").value = null;
+  document.getElementById("password1").value = null;
+  document.getElementById("user").innerHTML = "";
+  document.getElementById("pass").innerHTML = "";
+  document.getElementById("pass1").innerHTML = "";
+  document.getElementById("successReg").innerHTML = "";
+  document.getElementById("regist").disabled = false;
+})
