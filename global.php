@@ -54,6 +54,21 @@
     }
     echo $result;
   }
+  else if(isset($_REQUEST["fill1"]))
+  {
+    $reserve = $database->get_multi_row(RESERVATION1);
+    $result = "asdasd";
+    foreach($reserve as $row)
+    {
+      echo "<tr>";
+      echo "<td>".$row['name']."</td>";
+      echo "<td>".$row['date']."</td>";
+      echo "<td>".$row['contact']."</td>";
+      echo "<td>".$row['pname']."</td>";
+      echo "</tr>";
+    }
+    echo $result;
+  }
   else if(isset($_REQUEST["updateRes"]))
   {
     $database->others(sprintf(UPDATE_RESERVE, $_REQUEST["updateRes"]));
