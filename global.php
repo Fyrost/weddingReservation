@@ -57,7 +57,7 @@
   else if(isset($_REQUEST["fill1"]))
   {
     $reserve = $database->get_multi_row(RESERVATION1);
-    $result = "asdasd";
+    $result = "";
     foreach($reserve as $row)
     {
       echo "<tr>";
@@ -65,6 +65,7 @@
       echo "<td>".$row['date']."</td>";
       echo "<td>".$row['contact']."</td>";
       echo "<td>".$row['pname']."</td>";
+      echo "<td><input class='btn btn-danger' type='button' data-value=".$row['id']." onclick='cancelRes($(this).data().value)' name='delete' value='Cancel'></td>";
       echo "</tr>";
     }
     echo $result;
@@ -76,5 +77,9 @@
   else if(isset($_REQUEST["deleteRes"]))
   {
     $database->others(sprintf(DELETE_RESERVE, $_REQUEST["deleteRes"]));
+  }
+  else if(isset($_REQUEST["cancelRes"]))
+  {
+    $database->others(sprintf(UN_RESERVE, $_REQUEST["cancelRes"]));
   }
 ?>
