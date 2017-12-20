@@ -2,6 +2,7 @@
       session_start();
        include('db.php');
        include('query.php');
+
        $database     = new db();
        $errors         = array();
        $data           = array();
@@ -26,6 +27,21 @@
        if (empty($_POST['date']))
               $errors['date'] = 'Date is required.';
 
+       if(!empty($_POST['date'])){
+              $rdate= DateTime::createFromFormat('m/d/Y', $_POST['date'])->format('Y/m/d');
+              if($rdate>date("Y/m/d")){
+                     $reserved_num = $database->get_row(sprintf(COUNT_RESERVED,$qDate->format('Y/m/d')));
+                     if ($reserved_num["count"] != 0){
+                            $data['success'] = false;
+                            $data['errors'] = 'Date already reserved.';
+                     }
+              }else
+              {
+                     $data['success'] = false;
+                     $data['errors'] = 'Date has already passed.';
+              }
+       }
+       
        if ( ! empty($errors)) {
               $data['success'] = false;
               $data['errors']  = $errors;
