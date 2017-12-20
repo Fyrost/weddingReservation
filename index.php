@@ -172,19 +172,19 @@
 		      <div class="item active">
 		        <div class="fill" style="background-image:url('img/1.jpg');"></div>
 		        <div class="carousel-caption">
-		          <h1>Modern Business - A Bootstrap 3 Template</h1>
+		          <h1>Modern</h1>
 		        </div>
 		      </div>
 		      <div class="item">
 		        <div class="fill" style="background-image:url('img/2.jpg');"></div>
 		        <div class="carousel-caption">
-		          <h1>Ready to Style &amp; Add Content</h1>
+		          <h1>Elegant</h1>
 		        </div>
 		      </div>
 		      <div class="item">
 		        <div class="fill" style="background-image:url('img/3.jpg');"></div>
 		        <div class="carousel-caption">
-							asd
+				 <h1>Professional</h1>
 		        </div>
 		      </div>
 		    </div>
@@ -201,7 +201,6 @@
 	<a name="photo"></a>
 	<div class='photographer-section container-fluid'>
 		<h1 class="text-center">Our Photographer</h1>
-		<div class="row">
 			<div class="col-md-2 col-md-offset-1 photographer-profile">
 				<div class="vector-g-head"></div>
 				<h2 class="text-center">Peter Evero</h2>
@@ -212,8 +211,7 @@
 				<div class="photographer" style="background-image: url('img/photographer/1.jpg');">
 				</div>
 			</div>
-		</div>
-		<div class="row">
+
 			<div class="col-md-2 col-md-offset-1 photographer-profile">
 				<div class="vector-g-head"></div>
 				<h2 class="text-center">Joyce Castro</h2>
@@ -224,7 +222,7 @@
 				<div class="photographer" style="background-image: url('img/photographer/2.jpg');">
 				</div>
 			</div>
-		</div>
+
 	</div>
   <div class="reservation">
 	<a name="reserve"></a>

@@ -14,7 +14,7 @@ $("#photo").click(function() {
 $("#home").click(function() {
    scrollToAnchor('home');
 });
-
+var hasError = false;
 $(document).ready(function() {
        $('form').submit(function(event) {
               $('.form-group').removeClass('has-error');
@@ -38,6 +38,7 @@ $(document).ready(function() {
                      console.log(data);
                      if ( ! data.success) {
                             var alert     = '<div class="help-block">';
+                            hasError     = true;
                             if (data.errors.name) {
                                    $('#name-group').addClass('has-error');
                                    $('#name-group').append(alert + data.errors.name + '</div>');
@@ -71,20 +72,7 @@ $(document).ready(function() {
               });
               event.preventDefault();
        });
-       function showHint(name,email,number,photographer,date) {
-           if (str.length == 0) {
-               document.getElementById("txtHint").innerHTML = "";
-               return;
-           } else {
-               var xmlhttp = new XMLHttpRequest();
-               xmlhttp.onreadystatechange = function() {
-                   if (this.readyState == 4 && this.status == 200) {
-                   }
-               };
-               xmlhttp.open("GET", "update.php?name=" + name + "&email="+ email + "&number="+ number + "&photographer=" + photographer + "&date=" + date, true);
-               xmlhttp.send();
-           }
-       }
+
        $('input[name="date"]').on('changeDate',function(){
               $('#date-group').removeClass('has-error');
               $('#date-group').find('.help-block').remove();
@@ -120,6 +108,7 @@ $(document).ready(function() {
               $('#number-group').removeClass('has-error');
               $('#number-group').find('.help-block').remove();
        })
+
 
        $('input[name="number"]').keypress(function (e) {
               if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
