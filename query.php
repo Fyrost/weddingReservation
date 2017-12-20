@@ -14,10 +14,10 @@
   DEFINE("RESERVE_INSERT","INSERT INTO reserve(date,name,email,number,isConfirmed,photographer_id) VALUES('%s','%s','%s','%s',%s,1)");
   DEFINE("RESERVE_MAX_ID","SELECT max(id) AS id FROM reserve");
   DEFINE("RESERVATION", "SELECT reserve.id, reserve.name, reserve.date, CONCAT(reserve.email,'/', reserve.number) as contact, CONCAT(photographer.name,' ',photographer.last) as pname
-                        FROM reserve INNER JOIN photographer ON photographer.id = reserve.photographer_id WHERE isConfirmed = 1");
-  DEFINE("UN_RESERVE", "UPDATE reserve SET isConfirmed = 1 WHERE id = %s");                      
+                        FROM reserve INNER JOIN photographer ON photographer.id = reserve.photographer_id WHERE isConfirmed = 1 AND date > NOW()");
+  DEFINE("UN_RESERVE", "UPDATE reserve SET isConfirmed = 1 WHERE id = %s");
   DEFINE("RESERVATION1", "SELECT reserve.id, reserve.name, reserve.date, CONCAT(reserve.email,'/', reserve.number) as contact, CONCAT(photographer.name,' ',photographer.last) as pname
-                          FROM reserve INNER JOIN photographer ON photographer.id = reserve.photographer_id WHERE isConfirmed = 0");
+                          FROM reserve INNER JOIN photographer ON photographer.id = reserve.photographer_id WHERE isConfirmed = 0 AND date > NOW()");
   DEFINE("UPDATE_RESERVE", "UPDATE reserve SET isConfirmed = 0 WHERE id = %s");
   DEFINE("DELETE_RESERVE", "DELETE FROM reserve WHERE id = %s");
 
