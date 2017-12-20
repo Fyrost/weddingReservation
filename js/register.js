@@ -39,7 +39,7 @@ function pass_check()
   var pass1 = document.getElementById("password1").value;
   if (pass.length < 6)
   {
-    document.getElementById("pass").innerHTML = "Username must contain atleast 6 characters.";
+    document.getElementById("pass").innerHTML = "Password must contain atleast 6 characters.";
     p = false;
   }
   else

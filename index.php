@@ -109,8 +109,8 @@
 		        <table class="table">
 							<thead>
 								<tr>
-									<th>Date</th>
 									<th>Costumer Name</th>
+									<th>Date</th>
 									<th>Contact</th>
 									<th>Photographer Name</th>
 									<th>Options</th>
@@ -127,6 +127,36 @@
 		    </div>
 		  </div>
 		</div>
+
+		<div id="reservedModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Reserved List</h4>
+		      </div>
+		      <div class="modal-body">
+		        <table class="table">
+							<thead>
+								<tr>
+									<th>Costumer Name</th>
+									<th>Date</th>
+									<th>Contact</th>
+									<th>Photographer Name</th>
+									<th>Option</th>
+								</tr>
+							</thead>
+							<tbody id="bod1">
+							</tbody>
+						</table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
 		<a name="home"></a>
 		<div class="container-fluid" style="padding: 0;">
 			<div id="myCarousel" class="carousel slide">
